@@ -24,7 +24,8 @@ class ThreeScreen extends StatelessWidget {
             child: RaisedButton(
               onPressed: () {
                 //未声明的正常启动
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Second()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Second()));
               },
               child: Text('正常启动'),
             ),
@@ -43,7 +44,8 @@ class ThreeScreen extends StatelessWidget {
             child: new RaisedButton(
               onPressed: () {
                 // 销毁除了 two 之外的所有界面
-                Navigator.pushNamedAndRemoveUntil(context, 'two', ModalRoute.withName('two'));
+                Navigator.pushNamedAndRemoveUntil(
+                    context, 'two', ModalRoute.withName('two'));
               },
               child: Text('销毁除了 two 之外的所有界面'),
             ),
@@ -69,7 +71,6 @@ class ThreeScreen extends StatelessWidget {
           new Center(
             child: new RaisedButton(
               onPressed: () {
-
                 Navigator.pop(context, '给你的返回值333');
               },
               child: Text('第三个界面的返回1'),
